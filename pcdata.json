@@ -1,0 +1,30 @@
+ {
+   "pcs":[{
+	    "brand":"Dell",
+      "model": "7579",
+      "screenSize": 15.6,
+      "processor":"i7-7500",
+      "specs":"16gb, 512gb",
+      "screenType": "touch",
+      "price": 749.99,
+      "source": "eBay"
+    },{
+      "brand":"Dell",
+      "model":"7579",
+      "screenSize":15.6,
+      "processor": "i7-7500",
+      "specs": "16gb, 512gb",
+      "screenType": "touch",
+      "price": 759.95,
+      "source": "eBay"
+    },{
+	    "brand":"Dell",
+      "model": "5578",
+      "screenSize":15.6,
+      "processor": "i7-7500",
+      "specs": "16gb, 512gb",
+      "screenType": "touch",
+      "price":659.00,
+      "source": "eBay"
+    }]
+}

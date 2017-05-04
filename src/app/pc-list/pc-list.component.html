@@ -1,0 +1,35 @@
+
+  <h1> All Pc's</h1>
+  <div class="row">
+    <select (change)="onChange($event.target.value)">
+      <option value="All">All pcs</option>
+      <option value="i7-7500">i7-7500</option>
+      <option value="i7-6500">i7-6500</option>
+      <option value="other">Others</option>
+    </select>
+    <select (change)="onChangeScreenType($event.target.value)">
+      <option value="all">All</option>
+      <option value="touch">Touch</option>
+      <option value="nonTouch">Non-touch</option>
+    </select>
+    <select (change)="onChangePrice($event.target.value)">
+      <option value="all">All</option>
+      <option value="cheap">Under $700</option>
+      <option value="mid">$700 - $800</option>
+      <option value="expensive">$800+</option>
+    </select>
+  </div>
+  <div *ngFor = "let pc of pcs | async | filterProcessor: filterByProcessor | filterScreenType: filterByScreenType | filterPrice:filterByPrice" class="col-md-3">
+      <ul [class]="proximityBomb(pc)">
+        <li><h3>{{pc.model}}</h3></li>
+        <li>Brand: {{pc.brand}} </li>
+        <li>Processor: {{pc.processor}} </li>
+        <li>Specs: {{pc.specs}} </li>
+        <li>Screen Size: {{pc.screenSize}} </li>
+        <li>Screen Type: {{pc.screenType}} </li>
+        <li>Price: {{pc.price}} </li>
+        <li>Source: {{pc.source}} </li>
+      </ul>
+    </div>
+
+  <app-add-laptop (newLaptopSender)="addLapTop($event)"></app-add-laptop>
